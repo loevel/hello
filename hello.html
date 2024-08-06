@@ -6,6 +6,27 @@
     <title>Hello</title>
 </head>
 <body>
+    <h1>Hello, World!</h1>
+    <p>Welcome to my website.</p>
+    <p>Today is <span id="date"></span>.</p>
+    <p>It is now <span id="time"></span>.</p>
+
+    <script>
+        // Get the current date and time
+        var currentDate = new Date();
+
+        // Format the date
+        var options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        var formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+        // Format the time
+        var formattedTime = currentDate.toLocaleTimeString('en-US');
+
+        // Display the date and time
+        document.getElementById('date').textContent = formattedDate;
+        document.getElementById('time').textContent = formattedTime;
+    </script>
     
+    <p>Goodbye!</p>
 </body>
 </html>
